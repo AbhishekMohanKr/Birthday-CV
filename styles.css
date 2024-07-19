@@ -1,0 +1,136 @@
+body {
+    background-image: url('Assets/bg-transformed.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .cat1, .cat2, .dialogue-box-cat1, .dialogue-box-cat2 {
+    display: none;
+  }
+
+  #start-button:active {
+    transform: scale(1.5);
+  }
+
+ #start-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    opacity: 1;
+ }
+
+
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50px;
+  }
+  
+  .popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    border-radius: 50px;
+    opacity: 0.5; 
+  }
+  
+  .cat1 {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    width: 200px;
+    height: auto;
+    animation: slideInFromLeft 2s forwards;
+  }
+  
+  .cat2 {
+    position: absolute;
+    bottom: 0;
+    right: 80px; /* Align the right of the image with the right of the body */
+    width: 200px;
+    height: auto;
+    animation: slideInFromRight 2s forwards;
+  }
+  
+  .dialogue-box-cat1 {
+    position: absolute;
+    bottom: 200px;
+    left: 255px;
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 2s;
+  }
+
+  .dialogue-box-cat2 {
+    position: absolute;
+    bottom: 200px;
+    right: 255px;
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 4s;
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 0.8;
+    }
+  }
+
+  #scene-2 {
+    background-color: #e91919;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    opacity: 1;
+  }
